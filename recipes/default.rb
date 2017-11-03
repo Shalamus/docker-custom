@@ -6,18 +6,6 @@
 
 
 
-# #Sets up yum repository for docker
-# include_recipe 'chef-yum-docker::default'
-#
-# #Sets up apt repository for docker
-# include_recipe 'chef-apt-docker::default'
-#
-# package 'docker'
-#
-#
-# #Installs docker.
-# include_recipe 'docker_compose::installation'
-
 
 
 if node['platform'] == 'ubuntu'
@@ -31,7 +19,9 @@ end
 
 #Installs curl and docker compose
 package 'curl'
-execute 'sudo curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose'
-file '/usr/local/bin/docker-compose' do
+
+execute "sudo curl -L #{node['docker-compose']['url']}-`uname -s`-`uname -m` -o #{node['docker-compose']['bin']}"
+
+file node['docker-compose']['bin'] do
   mode '755'
 end

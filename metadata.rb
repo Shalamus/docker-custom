@@ -1,6 +1,6 @@
 name 'docker-custom'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Sahed Salam'
+maintainer_email 'salamsahed@gmail.com'
 license 'All Rights Reserved'
 description 'Installs/Configures docker-custom'
 long_description 'Installs/Configures docker-custom'
@@ -16,10 +16,10 @@ depends 'docker_compose', '~> 0.1.1'
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when
 # uploaded to a Supermarket.
 #
-# issues_url 'https://github.com/<insert_org_here>/docker-custom/issues'
+issues_url 'https://github.com/shalamus/docker-custom/issues'
 
 # The `source_url` points to the development repository for this cookbook.  A
 # `View Source` link will be displayed on this cookbook's page when uploaded to
 # a Supermarket.
 #
-# source_url 'https://github.com/<insert_org_here>/docker-custom'
+source_url 'https://github.com/shalamus/docker-custom'
